@@ -2,7 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px;
+  padding: var(--horizontal-space);
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
 
 .screen-header__title {
@@ -12,4 +14,17 @@
 
 .screen-header__icons span {
   margin-left: 32px;
+  position: relative;
+}
+
+@keyframes roatecog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotatez(360deg);
+  }
+}
+.screen-header__icons .fa-cog:hover {
+  animation: roatecog 2s linear infinite;
 }
